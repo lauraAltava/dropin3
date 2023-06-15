@@ -92,7 +92,9 @@ public class usuarioRegister extends JFrame {
                 if(nombre.isEmpty() || apellido1.isEmpty() || apellido2.isEmpty() || email.isEmpty() || movil.isEmpty() || contraseña.isEmpty()) {
                     JOptionPane.showMessageDialog(usuarioRegister.this, "El campo está vacío", "Error", JOptionPane.ERROR_MESSAGE);
                 } else {
-                    try (Connection connection = DriverManager.getConnection("jdbc:sqlite:src/main/resources/baseDropin")) {
+
+                    // src/main/resources/baseDropin
+                    try (Connection connection = DriverManager.getConnection("jdbc:sqlite:/home/INFORMATICA/alu10192170/Escriptori/dropin3-main/dropin2-main/Dropin/src/main/resources/baseDropin")) {
                         String insertQuery = "INSERT INTO Usuarios (nombre, apellido1, apellido2, email, movil, contraseña, saldo) " +
                                 "VALUES (?, ?, ?, ?, ?, ?, ?)";
 

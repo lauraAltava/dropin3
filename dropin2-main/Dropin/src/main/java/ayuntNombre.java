@@ -34,7 +34,9 @@ public class ayuntNombre extends JFrame {
         int conteo=0;
 
         try {
-            Connection connection = DriverManager.getConnection("jdbc:sqlite:C:\\Users\\Alejandro\\IdeaProjects\\dropin2-main\\Dropin\\src\\main\\resources\\baseDropin", "username", "password");
+            //C:\Users\Alejandro\IdeaProjects\dropin2-main\Dropin\src\main\resources\baseDropin
+
+            Connection connection = DriverManager.getConnection("jdbc:sqlite:/home/INFORMATICA/alu10192170/Escriptori/dropin3-main/dropin2-main/Dropin/src/main/resources/baseDropin ", "username", "password");
 
             String consulta="SELECT count(numero_serie) from Contenedores Group by ayuntamiento";
 
@@ -75,23 +77,23 @@ public class ayuntNombre extends JFrame {
 
 
 
-        ImageIcon ayuntamientoImage = new ImageIcon("C:\\Users\\Alejandro\\IdeaProjects\\dropin2-main\\Dropin\\IMAGES\\csss.png");  // Reemplaza "ayuntamiento.jpg" con la ruta de la imagen
+        ImageIcon ayuntamientoImage = new ImageIcon("IMAGES/csss.png");  // Reemplaza "ayuntamiento.jpg" con la ruta de la imagen
 
         if (nombre.equals("castellon")) {
-            ImageIcon ayun = new ImageIcon("C:\\Users\\Alejandro\\IdeaProjects\\dropin2-main\\Dropin\\IMAGES\\csss.png");  // Reemplaza "ayuntamiento.jpg" con la ruta de la imagen
+            ImageIcon ayun = new ImageIcon("IMAGES/csss.png");  // Reemplaza "ayuntamiento.jpg" con la ruta de la imagen
             ayuntamientoImage=ayun;
 
         }
         else if (nombre.equals("beni")) {
-            ImageIcon ayun= new ImageIcon("C:\\Users\\Alejandro\\IdeaProjects\\dropin2-main\\Dropin\\IMAGES\\beniii.png");  // Reemplaza "ayuntamiento.jpg" con la ruta de la imagen
+            ImageIcon ayun= new ImageIcon("IMAGES/beniii.png");  // Reemplaza "ayuntamiento.jpg" con la ruta de la imagen
             ayuntamientoImage=ayun;
         }
         else if (nombre.equals("vila")) {
-            ImageIcon ayun = new ImageIcon("C:\\Users\\Alejandro\\IdeaProjects\\dropin2-main\\Dropin\\IMAGES\\villa.png");  // Reemplaza "ayuntamiento.jpg" con la ruta de la imagen
+            ImageIcon ayun = new ImageIcon("IMAGES/villa.png");  // Reemplaza "ayuntamiento.jpg" con la ruta de la imagen
             ayuntamientoImage=ayun;
         }
         else if (nombre.equals("vall")) {
-            ImageIcon ayun= new ImageIcon("C:\\Users\\Alejandro\\IdeaProjects\\dropin2-main\\Dropin\\IMAGES\\vallA.png");  // Reemplaza "ayuntamiento.jpg" con la ruta de la imagen
+            ImageIcon ayun= new ImageIcon("IMAGES/vallA.png");  // Reemplaza "ayuntamiento.jpg" con la ruta de la imagen
             ayuntamientoImage=ayun;
         }
 

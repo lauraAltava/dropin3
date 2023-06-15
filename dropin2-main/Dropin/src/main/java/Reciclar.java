@@ -10,6 +10,16 @@ public class Reciclar extends JFrame {
     private Connection connection;
     private int contador = 0;
 
+    private String nombre;
+
+    public String getNombre() {
+        return nombre;
+    }
+
+    public void setNombre(String nombre) {
+        this.nombre = nombre;
+    }
+
     public Reciclar() {
         // Configurar la pantalla "Reciclar"
         setTitle("Reciclar");
@@ -64,6 +74,7 @@ public class Reciclar extends JFrame {
             public void actionPerformed(ActionEvent e) {
                 SwingUtilities.invokeLater(() -> {
                     usuarioOpciones usuarioOpciones = new usuarioOpciones();
+                    usuarioOpciones.setNombre(getNombre());
                     usuarioOpciones.setVisible(true);
                     dispose(); // Cierra la ventana actual
                 });

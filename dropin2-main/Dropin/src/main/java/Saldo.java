@@ -5,6 +5,16 @@ import java.awt.event.*;
 public class Saldo extends JFrame {
     private JLabel saldoLabel;
 
+    private String nombre;
+
+    public String getNombre() {
+        return nombre;
+    }
+
+    public void setNombre(String nombre) {
+        this.nombre = nombre;
+    }
+
     public Saldo() {
         // Configurar la pantalla "Saldo"
         setTitle("Saldo");
@@ -58,6 +68,7 @@ public class Saldo extends JFrame {
             public void actionPerformed(ActionEvent e) {
                 SwingUtilities.invokeLater(() -> {
                     usuarioOpciones usuarioOpciones = new usuarioOpciones();
+                    usuarioOpciones.setNombre(getNombre());
                     usuarioOpciones.setVisible(true);
                     dispose(); // Cierra la ventana actual
                 });

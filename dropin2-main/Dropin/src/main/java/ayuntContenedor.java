@@ -115,23 +115,23 @@ public class ayuntContenedor extends JFrame {
         // Crear el componente de imagen
         BufferedImage image = null;
 
-            ImageIcon scaledIcon = new ImageIcon("C:\\Users\\Alejandro\\IdeaProjects\\dropin2-main\\Dropin\\IMAGES\\castellon.png");  // Reemplaza "ayuntamiento.jpg" con la ruta de la imagen
+            ImageIcon scaledIcon = new ImageIcon("IMAGES/castellon.png");  // Reemplaza "ayuntamiento.jpg" con la ruta de la imagen
 
             if (nombre.equals("castellon")) {
-                ImageIcon ayun = new ImageIcon("C:\\Users\\Alejandro\\IdeaProjects\\dropin2-main\\Dropin\\IMAGES\\castellon.png");  // Reemplaza "ayuntamiento.jpg" con la ruta de la imagen
+                ImageIcon ayun = new ImageIcon("IMAGES/castellon.png");  // Reemplaza "ayuntamiento.jpg" con la ruta de la imagen
                 scaledIcon=ayun;
 
             }
             else if (nombre.equals("beni")) {
-                ImageIcon ayun= new ImageIcon("C:\\Users\\Alejandro\\IdeaProjects\\dropin2-main\\Dropin\\IMAGES\\Benicassim.png");  // Reemplaza "ayuntamiento.jpg" con la ruta de la imagen
+                ImageIcon ayun= new ImageIcon("IMAGES/Benicassim.png");  // Reemplaza "ayuntamiento.jpg" con la ruta de la imagen
                 scaledIcon=ayun;
             }
             else if (nombre.equals("vila")) {
-                ImageIcon ayun = new ImageIcon("C:\\Users\\Alejandro\\IdeaProjects\\dropin2-main\\Dropin\\IMAGES\\Vila-real.png");  // Reemplaza "ayuntamiento.jpg" con la ruta de la imagen
+                ImageIcon ayun = new ImageIcon("IMAGES/Vila-real.png");  // Reemplaza "ayuntamiento.jpg" con la ruta de la imagen
                 scaledIcon=ayun;
             }
             else if (nombre.equals("vall")) {
-                ImageIcon ayun = new ImageIcon("C:\\Users\\Alejandro\\IdeaProjects\\dropin2-main\\Dropin\\IMAGES\\LaVall.png");  // Reemplaza "ayuntamiento.jpg" con la ruta de la imagen
+                ImageIcon ayun = new ImageIcon("IMAGES/LaVall.png");  // Reemplaza "ayuntamiento.jpg" con la ruta de la imagen
                 scaledIcon = ayun;
             }
 
@@ -187,7 +187,7 @@ public class ayuntContenedor extends JFrame {
                 } else {
                     try {
                         // Establecer la conexión a la base de datos
-                        Connection connection = DriverManager.getConnection("jdbc:sqlite:C:\\Users\\Alejandro\\IdeaProjects\\dropin2-main\\Dropin\\src\\main\\resources\\baseDropin", "username", "password");
+                        Connection connection = DriverManager.getConnection("jdbc:sqlite:/home/INFORMATICA/alu10192170/Escriptori/dropin3-main/dropin2-main/Dropin/src/main/resources/baseDropin", "username", "password");
 
                         // Preparar la sentencia SQL
                         String insertQuery = "INSERT INTO Contenedores (numero_serie,ayuntamiento, tipos, direccion) VALUES (?,?, ?, ?)";

@@ -3,6 +3,17 @@ import java.awt.*;
 import java.awt.event.*;
 
 public class usuarioOpciones extends JFrame {
+
+    private String nombre;
+
+    public String getNombre() {
+        return nombre;
+    }
+
+    public void setNombre(String nombre) {
+        this.nombre = nombre;
+    }
+
     public usuarioOpciones() {
         // Configurar la pantalla siguiente
         setTitle("Pantalla siguiente");
@@ -53,6 +64,7 @@ public class usuarioOpciones extends JFrame {
             public void actionPerformed(ActionEvent e) {
                 SwingUtilities.invokeLater(() -> {
                     Saldo saldo = new Saldo();
+                    saldo.setNombre(getNombre());
                     saldo.setVisible(true);
                     dispose(); // Cierra la ventana actual
                 });
@@ -64,6 +76,7 @@ public class usuarioOpciones extends JFrame {
             public void actionPerformed(ActionEvent e) {
                 SwingUtilities.invokeLater(() -> {
                     Reciclar reciclar = new Reciclar();
+                    reciclar.setNombre(getNombre());
                     reciclar.setVisible(true);
                     dispose(); // Cierra la ventana actual
                 });
